@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var servicesRouter = require('./routes/servicios');
 var dbRouter = require('./routes/db');
+var companyStoryRouter = require('./routes/companyStory');
 
 var app = express();
 
@@ -25,12 +26,13 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/servicios', servicesRouter);
 app.use('/db', dbRouter);
+app.use('/companyStory', companyStoryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  next(createError(404));any
 });
-
+app.use('/db', dbRouter);
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
