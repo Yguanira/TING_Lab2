@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <%- include partials/head %>
+    
+  </head>
+
+  <body>
+
+    <!-- HEADER-->
+    <%- include partials/header %>
+
+    <!-- CONTENT-->
+    <main role="main" style="padding: 3% 10% 0 10%;">
+
+      <!-- Services -->
+      <% services.forEach(function(service, index){ %>
+
+        <div class="row featurette">
+
+            <div class="col-md-7 <%= service['columsOrder'] %>">
+              <h2 class="featurette-heading"><%= service['heading'] %> <span class="text-muted"><%= service['subheading'] %></span></h2>
+              <p class="lead"><%= service['description'] %></p>
+            </div>
+      
+            <div class="col-md-5"> 
+              <img src="<%= service['imageUrl'] %>" class="featurette-image img-fluid">
+            </div>
+      
+        </div>
+      
+        <% if(index < services.length - 1){ %>
+        <hr class="featurette-divider">
+        <% } %>
+          
+      <% }); %>
+
+    </main>
+
+  <!-- FOOTER -->
+  <%- include partials/footer %>
+
+</body>
+
+</html>
