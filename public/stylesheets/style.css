@@ -113,6 +113,10 @@ a:hover {
   line-height: 1;
   letter-spacing: -.05rem;
 }
+
+.featurette .featurette-subheading {
+  color: var(--primaryColor);
+}
 .featurette .featurette-image {
   width: 20rem;
   height: 20rem;
