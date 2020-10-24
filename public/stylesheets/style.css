@@ -108,18 +108,14 @@ a:hover {
 
 /* =========== Services =========== */
 
-.featurette {
-  margin: 5rem 0; 
-}
-
-.featurette-heading {
+.featurette .featurette-heading {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -.05rem;
 }
 .featurette-image {
-  width: 500px;
-  height: 500px;
+  width: 20rem;
+  height: 20rem;
   object-fit: cover;
 }
 

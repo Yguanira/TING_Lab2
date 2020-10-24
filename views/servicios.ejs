@@ -16,17 +16,17 @@
     <main role="main" style="padding: 3% 10% 0 10%;">
 
       <!-- Services -->
-      <% services.forEach(function(service, index){ %>
+      <% services.results.forEach(function(service, index){ %>
 
         <div class="row featurette">
 
-            <div class="col-md-7 <%= service['columsOrder'] %>">
-              <h2 class="featurette-heading"><%= service['heading'] %> <span class="text-muted"><%= service['subheading'] %></span></h2>
-              <p class="lead"><%= service['description'] %></p>
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><%= service.name %> <span class="text-muted"><%= service.slogan %></span></h2>
+              <p class="lead"><%= service.description %></p>
             </div>
       
             <div class="col-md-5"> 
-              <img src="<%= service['imageUrl'] %>" class="featurette-image img-fluid">
+              <img src="<%= service.imageurl %>" class="featurette-image img-fluid">
             </div>
       
         </div>
