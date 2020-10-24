@@ -129,6 +129,12 @@ a:hover {
   border-color: var(--primaryColor);
 }
 
+.product-card .card-img-top{
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
 .product-card .card-title {
   color: var(--primaryColor);
   font-weight: bold;

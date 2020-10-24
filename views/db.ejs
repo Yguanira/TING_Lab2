@@ -2,16 +2,50 @@
 <html>
   <head>
 
+    <%- include partials/head %>
+
   </head>
   <body>
 
-    <h2>Database results</h2>
+    <!-- HEADER-->
+    <%- include partials/header %>
+
+    <!-- CONTENT-->
+    <main role="main" class="p-5 mt-5">
+
+        <!-- Products -->
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5">
     
-    <ul>
-      <% results.forEach(function(r){ %>
-          <li><%= r.id %> - <%= r.name %></li>
-      <% }); %>
-  </ul>
+            <% products.results.forEach(function(product){ %>
+            <div class="col mb-4">
+                <div class="card h-100 product-card">
+                    <img src="<%=product.imageurl%>" class="card-img-top" alt="<%= product['name'] %> image">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= product.name %></h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><%= product.category_id %></h6>
+                      <p class="card-text"><%= product.description %></p>
+      
+                      <div class="text-right">
+                        <button type="button" class="btn button-outlined">Añadir al carrito
+      
+                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bag-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.5 3.5a2.5 2.5 0 0 1 5 0V4h-5v-.5zm6 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                          </svg>
+          
+                        </button>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+
+        </div>
+
+    </main>
+
+  <!-- FOOTER -->
+  <%- include partials/footer %>
 
   </body>
 </html>
