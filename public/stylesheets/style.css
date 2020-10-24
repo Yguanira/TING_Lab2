@@ -127,6 +127,7 @@ a:hover {
 
 .product-card {
   border-color: var(--primaryColor);
+  box-shadow: 10px 10px 23px -6px rgba(168,168,168,1);
 }
 
 .product-card .card-img-top{
