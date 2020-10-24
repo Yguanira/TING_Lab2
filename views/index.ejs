@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <%- include partials/head %>
+
+  </head>
+
+  <body>
+
+    <!-- HEADER-->
+    <%- include partials/header %>
+
+    <!-- CONTENT-->
+    <main role="main">
+
+      <!-- Carousel-->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Slides-->
+        <ol class="carousel-indicators">
+
+          <% slides.forEach(function(slide, index){ %>
+            <li data-target="#myCarousel" data-slide-to="<%= index %>" class="<%= slide['isActive'] %>"></li>
+          <% }); %>
+
+        </ol>
+
+        <div class="carousel-inner">
+
+          <% slides.forEach(function(slide){ %>
+
+            <div class="carousel-item <%= slide['isActive'] %>">
+            
+              <img src="<%= slide['imageUrl'] %>">
+              
+              <div class="container">
+                <div class="carousel-caption <%= slide['contentPosition'] %>">
+                  <h1><%= slide['heading'] %></h1>
+                  <p><%= slide['description'] %></p>
+                  <button type="button" class="btn btn-lg"><%= slide['buttonName'] %></button>
+                </div>
+              </div>
+              
+            </div>
+
+          <% }); %>
+
+        </div>
+
+        <!-- Controls-->
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+
+      <!-- News-->
+      <div class="container news">
+
+        <div class="row">
+
+          <% news.forEach(function(new_){ %>
+
+            <div class="col-lg-4">
+            
+              <img src="<%= new_['imageUrl'] %>" class="img-thumbnail">
+
+              <h2><%= new_['heading'] %></h2>
+              <p><%= new_['description'] %></p>
+              <button type="button" class="btn btn-lg button-outlined"><%= new_['buttonName'] %></button>
+              
+            </div>
+
+          <% }); %>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <%- include partials/footer %>
+
+    </footer>
+
+</html>
