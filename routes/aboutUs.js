@@ -13,7 +13,7 @@ var router = express.Router();
 router.get('/', async (req, res) => {
   try {
     const client = await pool.connect();
-    const result = await client.query("SELECT * FROM company_employees_table WHERE job ~* '^direct ?\d' AND job = 'CEO' ");
+    const result = await client.query("SELECT * FROM company_employees_table WHERE job LIKE 'Direct%' OR job LIKE 'CEO'");
     const results = { 'results': (result) ? result.rows : null};
     res.render('aboutUs', { title: "Sobre nosotros", executiveCommittee: results } );
     client.release();
