@@ -140,6 +140,10 @@ a:hover {
   font-weight: bold;
 }
 
+.product-card .card-subtitle {
+  font-size: small;
+}
+
 .product-card .card-text {
   font-size: 90%;
   text-align: justify;
