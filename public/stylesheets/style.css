@@ -121,6 +121,7 @@ a:hover {
   width: 20rem;
   height: 20rem;
   object-fit: cover;
+  box-shadow: 0px 21px 38px -15px rgba(92,92,92,1);
 }
 
 /* =========== Product Card =========== */
