@@ -113,7 +113,7 @@ a:hover {
   line-height: 1;
   letter-spacing: -.05rem;
 }
-.featurette-image {
+.featurette .featurette-image {
   width: 20rem;
   height: 20rem;
   object-fit: cover;

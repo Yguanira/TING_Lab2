@@ -18,21 +18,25 @@
       <!-- Services -->
       <% services.results.forEach(function(service, index){ %>
 
-        <div class="row featurette">
+        <div class="row featurette p-5">
 
-            <div class="col-md-7">
+          <%if ( (index % 2) == 1) { %> 
+            <div class="col-md-7 order-md-2"> 
+          <% } else { %>  
+            <div class="col-md-7 ">
+          <% } %>      
               <h2 class="featurette-heading"><%= service.name %> <span class="text-muted"><%= service.slogan %></span></h2>
               <p class="lead"><%= service.description %></p>
             </div>
       
-            <div class="col-md-5"> 
+            <div class="col-md-5 justify-content-center"> 
               <img src="<%= service.imageurl %>" class="featurette-image img-fluid">
             </div>
       
         </div>
       
-        <% if(index < services.length - 1){ %>
-        <hr class="featurette-divider">
+        <% if(index < services.results.length - 1){ %>
+        <hr class="featurette-divider my-5">
         <% } %>
           
       <% }); %>
