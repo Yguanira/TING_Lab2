@@ -21,12 +21,19 @@
                 
                 <div class="flip-box">
                     <div class="flip-box-inner">
-                      <div class="flip-box-front">
+                      
+                        <div class="flip-box-front">
                         <img src="<%= executive.imageurl %>" class="card-img-top" alt="<%= executive.name %> image">
                       </div>
+                      
                       <div class="flip-box-back">
-                        <h2>Back Side</h2>
+                        <div class="p-3 pt-5">
+                            <h2><%= executive.name %></h2>
+                            <h4 class="text-dark"><%= executive.job %></h4>
+                            <p><%= executive.description %></h3>
+                        </div>
                       </div>
+                      
                     </div>
                 </div>
 

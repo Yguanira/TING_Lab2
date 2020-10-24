@@ -275,7 +275,7 @@ footer div {
 }
 
 .flip-box-back {
-  background-color: dodgerblue;
+  background-color: var(--primaryColor);
   color: white;
   transform: rotateY(180deg);
 }
