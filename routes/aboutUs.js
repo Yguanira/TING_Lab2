@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     const client = await pool.connect();
     const result = await client.query("SELECT * FROM company_employees_table WHERE job ~* '^direct ?\d' AND WHERE job = CEO ");
     const results = { 'results': (result) ? result.rows : null};
-    res.render('servicios', { title: "Sobre nosotros", executiveCommittee: results } );
+    res.render('aboutUs', { title: "Sobre nosotros", executiveCommittee: results } );
     client.release();
   } catch (err) {
     console.error(err);
