@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <%- include partials/head %>
+
+  </head>
+  <body>
+
+    <!-- HEADER-->
+    <%- include partials/header %>
+
+    <!-- CONTENT-->
+    <main role="main" class="p-5 mt-5">
+
+        <!-- Products -->
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+    
+            <% executiveCommittee.results.forEach(function(executive){ %>
+            <div class="col mb-4">
+                
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                        <img src="<%= executive.imageurl %>" class="card-img-top" alt="<%= executive.name %> image">
+                      </div>
+                      <div class="flip-box-back">
+                        <h2>Back Side</h2>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <% }); %>
+
+        </div>
+
+    </main>
+
+  <!-- FOOTER -->
+  <%- include partials/footer %>
+
+  </body>
+</html>
